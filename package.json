@@ -1,0 +1,24 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html team.html store.html",
+    "build": "parcel build index.html team.html store.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BOYWONDER3/shopping-cart-using-javascrtpt.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BOYWONDER3/shopping-cart-using-javascrtpt/issues"
+  },
+  "homepage": "https://github.com/BOYWONDER3/shopping-cart-using-javascrtpt#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5"
+  }
+}

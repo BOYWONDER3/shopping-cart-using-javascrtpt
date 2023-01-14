@@ -19,7 +19,7 @@
   </header>
   <section class="text-gray-700 body-font">
     <div class="container px-5 py-24 mx-auto">
-      <div class="flex flex-wrap -m-4">
+      <div data-store-container class="flex flex-wrap -m-4">
         <div class="lg:w-1/4 md:w-1/2 p-4 w-full">
           <div class="block relative h-48 rounded overflow-hidden">
             <img alt="ecommerce" class="object-cover object-center w-full h-full block" src="https://dummyimage.com/420x260/F00/F00">
@@ -174,5 +174,20 @@
       <div class="bg-red-500 rounded-full text-xs absolute w-6 h-6 flex justify-center items-center right-0 bottom-0 transform translate-x-2 translate-y-2">2</div>
     </button>
   </section>
+  <template id="store-item-template">
+    <div data-store-item class="lg:w-1/4 md:w-1/2 p-4 w-full">
+      <div class="block relative h-48 rounded overflow-hidden">
+        <img data-image alt="ecommerce" class="object-cover object-center w-full h-full block">
+      </div>
+      <div class="mt-4 flex items-end justify-between">
+        <div>
+          <h3 data-category class="text-gray-500 text-xs tracking-widest title-font uppercase mb-1"></h3>
+          <h2 data-name class="text-gray-900 title-font text-lg font-medium"></h2>
+          <p data-price class="mt-1"></p>
+        </div>
+        <button class="text-white py-2 px-4 text-xl bg-blue-500 rounded hover:bg-blue-700">Add To Cart</button>
+      </div>
+    </div>
+  </template>
 </body>
 </html>
