@@ -13,7 +13,7 @@ export function setupStore() {
         if (e.target.matches("[data-add-to-cart-button]")) {
             const id = e.target.closest("[data-store-item]")
             .dataset.itemId
-            addToCart(id)
+            addToCart(parseInt(id))
         }
     })
 
