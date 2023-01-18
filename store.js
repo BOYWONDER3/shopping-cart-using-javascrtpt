@@ -1,5 +1,6 @@
 import items from './items.json'
 import { addToCart } from './shoppingChart'
+import addGlobalEventListener from './util/addGlobalEventListener'
 import formatCurrency from './util/formatCurrency.js'
 
 const storeItemTemplate = document.querySelector('#store-item-template')
@@ -8,13 +9,12 @@ const IMAGE_URL = "https://dummyimage.com/420x260"
 
 
 export function setupStore() {
-
-    document.addEventListener('click', e => {
-        if (e.target.matches("[data-add-to-cart-button]")) {
-            const id = e.target.closest("[data-store-item]")
+    if(storeItemContainer == null) return
+    
+    addGlobalEventListener('click', '[data-add-to-cart-button]', e => {
+        const id = e.target.closest("[data-store-item]")
             .dataset.itemId
             addToCart(parseInt(id))
-        }
     })
 
     items.forEach(renderStoreItem)
